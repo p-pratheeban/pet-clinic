@@ -1,9 +1,9 @@
 package com.pratheeban.services;
 
-import java.util.List;
+import java.util.Set;
 
 public interface CrudService<T, ID> {
-	List<T> findAll();
+	Set<T> findAll();
 
 	T findById(ID id);
 
