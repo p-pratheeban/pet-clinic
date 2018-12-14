@@ -4,8 +4,9 @@ import java.util.Set;
 
 import com.pratheeban.model.Owner;
 import com.pratheeban.services.CrudService;
+import com.pratheeban.services.OwnerService;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -30,6 +31,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public void deleteById(Long id) {
 		super.deleteById(id);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 
 }

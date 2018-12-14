@@ -3,9 +3,9 @@ package com.pratheeban.services.map;
 import java.util.Set;
 
 import com.pratheeban.model.Vet;
-import com.pratheeban.services.CrudService;
+import com.pratheeban.services.VetService;
 
-public class VetMapService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Set<Vet> findAll() {
