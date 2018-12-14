@@ -2,10 +2,12 @@ package com.pratheeban.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.pratheeban.model.Owner;
-import com.pratheeban.services.CrudService;
 import com.pratheeban.services.OwnerService;
 
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
