@@ -1,6 +1,7 @@
 package com.pratheeban.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import com.pratheeban.model.Owner;
 import com.pratheeban.model.Vet;
@@ -8,13 +9,12 @@ import com.pratheeban.services.OwnerService;
 import com.pratheeban.services.VetService;
 import com.pratheeban.services.map.OwnerMapService;
 import com.pratheeban.services.map.VetMapService;
-
+@Component
 public class DataLoder implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 
 	public DataLoder(OwnerService ownerService, VetService vetService) {
-		super();
 		this.ownerService = new OwnerMapService();
 		this.vetService = new VetMapService();
 	}
