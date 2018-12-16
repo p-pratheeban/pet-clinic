@@ -2,6 +2,7 @@ package com.pratheeban.services.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.pratheeban.model.Owner;
@@ -11,6 +12,7 @@ import com.pratheeban.services.PetService;
 import com.pratheeban.services.PetTypeService;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	private final PetTypeService petTypeService;

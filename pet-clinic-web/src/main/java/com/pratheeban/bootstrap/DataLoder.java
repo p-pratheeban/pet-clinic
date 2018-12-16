@@ -19,20 +19,24 @@ import com.pratheeban.services.VisitService;
 
 @Component
 public class DataLoder implements CommandLineRunner {
+	
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialtyService specialtyService;
 	private final VisitService visitService;
 
-	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialtyService specialtyService, VisitService visitService) {
-        this.ownerService = ownerService;
-        this.vetService = vetService;
-        this.petTypeService = petTypeService;
-        this.specialtyService = specialtyService;
-        this.visitService = visitService;
-    }
+	
+
+	public DataLoder(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+			SpecialtyService specialtyService, VisitService visitService) {
+		
+		this.ownerService = ownerService;
+		this.vetService = vetService;
+		this.petTypeService = petTypeService;
+		this.specialtyService = specialtyService;
+		this.visitService = visitService;
+	}
 
 	@Override
 	public void run(String... args) throws Exception {
